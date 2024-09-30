@@ -3,7 +3,7 @@
 	<UiMod name="WarBoard_Clock" version="0.4.0" date="20/05/2024" >
 		<Author name="Ramshackles, Zomega" email="Ramshackles@live.dk" />
 		<Description text="A Clock module for WarBoard." />
-		<VersionSettings gameVersion="1.3.5" windowsVersion="1.1" savedVariablesVersion="1.0" />
+		<VersionSettings gameVersion="1.4.8" windowsVersion="1.1" savedVariablesVersion="1.0" />
 		<Dependencies>
 				<Dependency name="WarBoard" />
 				<Dependency name="EA_ChatWindow" />
