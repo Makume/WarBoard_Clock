@@ -11,7 +11,7 @@ local function UpdateLabels()
 	LabelSetText(COWindowName.."_lblGreen", StringToWString("G: "..WarBoard_ClockSettings.G))
 	LabelSetText(COWindowName.."_lblBlue", StringToWString("B: "..WarBoard_ClockSettings.B))
 	TextEditBoxSetText(COWindowName.."_edtStringFormat", WarBoard_ClockSettings.Format)
-	TextEditBoxSetText(COWindowName.."_OffsetSeconds", WarBoard_ClockSettings.Offset)
+	TextEditBoxSetText(COWindowName.."_OffsetSeconds", towstring(WarBoard_ClockSettings.Offset))
 end
 
 local function GetOption()

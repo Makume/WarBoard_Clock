@@ -44,11 +44,15 @@ function WarBoard_Clock.OnUpdate(elapsedTime)
 		old_total_seconds = total_seconds
 	end
 	-- Display the new time.
-	LabelSetText("WarBoard_ClockText", WarBoard_Clock.CalcTime(total_seconds, 0)) 
+	LabelSetText("WarBoard_ClockText", WarBoard_Clock.CalcTime(total_seconds, 0))
 end
 
 function WarBoard_Clock.OnMouseOver()
 	Tooltips.CreateTextOnlyTooltip("WarBoard_Clock", nil)
+	Tooltips.SetUpdateCallback(WarBoard_Clock.SetUpdateCallback)
+end
+
+function WarBoard_Clock.SetUpdateCallback()
 	Tooltips.AnchorTooltip(WarBoard.GetModToolTipAnchor("WarBoard_Clock"))
 	local total_seconds = GetComputerTime()
 	local offset = WarBoard_ClockSettings.Offset
